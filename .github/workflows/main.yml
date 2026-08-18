@@ -1,7 +1,8 @@
 name : deploy React vite to Github pages
 on :
   push:
-branches :["master"]
+    branches :
+      -master
 workflow_dispatch:
 
 permissions:
