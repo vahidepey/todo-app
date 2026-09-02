@@ -7,17 +7,18 @@ function TodoForm ({setTodos}){
        const newTodo = {
         id:Date.now(),
          text:todo,
-       }
+         completed:false
+       };
        setTodos((prevTodos)=> [...prevTodos , newTodo])
        console.log('after:',newTodo)
        setTodo('')
     }
     return(
-        <div>
-            <input type="text " placeholder="Enter a todo" value={todo}  onChange={(e) => { setTodo(e.target.value)
+        <div className="todo-form">
+            <input className="todo-input" type="text " placeholder="Enter a todo" value={todo}  onChange={(e) => { setTodo(e.target.value)
                
             }} />
-     <button onClick={handleSubmit}> Add</button>
+     <button className="add-btn"  onClick={handleSubmit}> Add</button>
         </div>
     )
 }
